@@ -10,7 +10,7 @@
 
 **Professional bi-directional chat synchronization between Minecraft (BungeeCord) and Discord.** *Developed by ATRCORE*
 
-[Report Bug](https://github.com/YOUR_USERNAME/BungeeChatDiscord/issues) · [Request Feature](https://github.com/YOUR_USERNAME/BungeeChatDiscord/issues)
+[Report Bug](https://github.com/ATRCORE-UA/BungeeChatDiscord/issues) · [Request Feature](https://github.com/ATRCORE-UA/BungeeChatDiscord/issues)
 
 </div>
 
