@@ -42,27 +42,67 @@
 Everything is configurable in `config.yml`.
 
 ```yaml
-# Discord Bot Token
-token: "YOUR_TOKEN_HERE"
-channel_id: "123456789012345678"
+# ==========================================
+#         BungeeChatDiscord (BCD)
+#           Created by ATRCORE
+# ==========================================
 
-# Bot Status
+# --- DISCORD SETTINGS ---
+token: "INSERT_TOKEN_HERE"
+channel_id: "000000000000000000"
+
+# Bot Status Settings
+# Type: PLAYING, WATCHING, LISTENING, COMPETING
 status:
+  enabled: true
   text: "ExoticLegacy Network"
   type: "PLAYING"
 
-# Rename your servers for Discord
+# --- FEATURES ---
+
+# Server Aliases (Rename your servers for Discord)
+# RealName: "Nice Name"
 aliases:
   lobby: "HUB"
-  survival: "SURVIVAL"
+  main: "SURVIVAL"
+  minigames: "GAMES"
 
-# Rename Discord roles for Minecraft
+# Role Aliases (Rename Discord roles for Minecraft chat)
+# DiscordRole: "MinecraftFormat"
 roles:
   "Owner": "&4[Owner]"
-  "Member": "&7[Player]"
+  "Admin": "&c[Admin]"
+  "Moderator": "&9[Mod]"
+  "VIP": "&6[VIP]"
+  "default": "&7[Player]"
 
-# Anti-Spam Settings
+# Anti-Spam System
 anti_spam:
   enabled: true
-  max_repeats: 3
-  time_window: 2000
+  max_repeats: 3        # How many identical messages allowed?
+  time_window: 2000     # Time in ms (2 seconds)
+  warning_message: "&cPlease do not spam!"
+
+# --- FORMATTING & MESSAGES (LOCALIZATION) ---
+# Supports standard color codes (&a) and Hex colors (&#RRGGBB)
+
+formats:
+  # Variables: %role_alias%, %user%, %message%
+  discord_to_minecraft: "&b[Discord] %role_alias% &f%user%: &f%message%"
+  
+  # Variables: %server%, %prefix%, %player%, %message%
+  minecraft_to_discord: "**[%server%]** %prefix% %player%: %message%"
+
+messages:
+  # Join/Leave Messages for Discord
+  join:
+    enabled: true
+    text: "🟢 **%player%** joined the server!"
+  leave:
+    enabled: true
+    text: "🔴 **%player%** left the server."
+  
+  # Plugin Messages (In-Game)
+  reload_success: "&a[BCD] Configuration reloaded successfully!"
+  no_permission: "&c[BCD] You do not have permission to use this command."
+  unknown_command: "&c[BCD] Unknown command. Use /bcd reload"
