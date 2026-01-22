@@ -1,0 +1,17 @@
+name: BungeeChatDiscord
+version: 1.5.2-RELEASE
+main: ua.pp.atrcore.BungeeChatDiscord
+author: ATRCORE
+description: Advanced Discord <-> Minecraft Chat Bridge for BungeeCord networks.
+website: https://www.spigotmc.org/resources/your-id
+
+commands:
+  bcd:
+    description: Main command for BCD plugin
+    permission: bcd.admin
+    aliases: [bungeechatdiscord]
+
+permissions:
+  bcd.admin:
+    description: Allows reloading the configuration
+    default: op
