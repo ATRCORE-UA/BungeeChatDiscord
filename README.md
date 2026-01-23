@@ -30,7 +30,7 @@
 
 ## 📦 Installation
 
-1.  Download the latest `.jar` from the [Releases](https://github.com/YOUR_USERNAME/BungeeChatDiscord/releases) page.
+1.  Download the latest `.jar` from the [Releases](https://github.com/ATRCORE-UA/BungeeChatDiscord/releases) page.
 2.  Drop the file into your **BungeeCord** `plugins` folder.
 3.  Restart your proxy.
 4.  Open `plugins/BungeeChatDiscord/config.yml`.
